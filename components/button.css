@@ -1,0 +1,79 @@
+.button {
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.2;
+  font-family: "Inter", sans-serif;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+}
+
+.button--primary {
+  background-color: #3F5EF4;
+}
+.button--primary:hover {
+  background-color: #0f36f1;
+}
+.button--primary.button--outlined {
+  background-color: transparent;
+  border: 2px solid #3F5EF4;
+  color: #3F5EF4;
+}
+.button--primary.button--outlined:hover {
+  background-color: #3F5EF4;
+  color: white;
+}
+
+.button--dark {
+  background-color: #151213;
+}
+.button--dark:hover {
+  background-color: black;
+}
+.button--dark.button--outlined {
+  background-color: transparent;
+  border: 2px solid #151213;
+  color: #151213;
+}
+.button--dark.button--outlined:hover {
+  background-color: #151213;
+  color: white;
+}
+
+.button--secondary {
+  background-color: #FFDC00;
+  color: #151213;
+}
+.button--secondary:hover {
+  background-color: #ccb000;
+}
+.button--secondary.button--outlined {
+  background-color: transparent;
+  border: 2px solid #FFDC00;
+  color: #FFDC00;
+}
+.button--secondary.button--outlined:hover {
+  background-color: #FFDC00;
+  color: white;
+}
+
+.button--tertiary {
+  background-color: #01EA90;
+  color: #151213;
+}
+.button--tertiary:hover {
+  background-color: #01b771;
+}
+.button--tertiary.button--outlined {
+  background-color: transparent;
+  border: 2px solid #01EA90;
+  color: #01EA90;
+}
+.button--tertiary.button--outlined:hover {
+  background-color: #01EA90;
+  color: white;
+}/*# sourceMappingURL=button.css.map */

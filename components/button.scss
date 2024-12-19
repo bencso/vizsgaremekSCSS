@@ -1,0 +1,131 @@
+@import "../partials/colors.scss";
+@import "../partials/typography.scss";
+
+$border-radius: 10px;
+$default-padding: 10px 16px;
+
+$primary-color: $blue;
+$dark-color: $black;
+$secondary-color: $yellow;
+$tertiary-color: $green;
+
+@mixin button {
+    color: white;
+    border: none;
+    border-radius: $border-radius;
+    padding: $default-padding;
+    @include font-button;
+    font-family: $font-family;
+    cursor: pointer;
+    transition: all 150ms ease-in-out;
+}
+
+//Primary button
+
+@mixin button--primary {
+    background-color: $primary-color;
+    &:hover {
+        background-color: darken($primary-color, 10%);
+    }
+}
+
+@mixin button--outlined-primary {
+    background-color: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+    &:hover {
+        background-color: $primary-color;
+        color: white;
+    }
+}
+
+//Dark button
+
+@mixin button--dark {
+    background-color: $dark-color;
+    &:hover {
+        background-color: darken($dark-color, 10%);
+    }
+}
+
+@mixin button--outlined-dark {
+    background-color: transparent;
+    border: 2px solid $dark-color;
+    color: $dark-color;
+    &:hover {
+        background-color: $dark-color;
+        color: white;
+    }
+}
+
+//Secondary button
+
+@mixin button--secondary {
+    background-color: $secondary-color;
+    color: $dark-color;
+    &:hover {
+        background-color: darken($secondary-color, 10%);
+    }
+}
+
+@mixin button--outlined-secondary {
+    background-color: transparent;
+    border: 2px solid $secondary-color;
+    color: $secondary-color;
+    &:hover {
+        background-color: $secondary-color;
+        color: white;
+    }
+}
+
+//Tertiary button
+
+@mixin button--tertiary {
+    background-color: $tertiary-color;
+    color: $dark-color;
+    &:hover {
+        background-color: darken($tertiary-color, 10%);
+    }
+}
+
+@mixin button--outlined-tertiary {
+    background-color: transparent;
+    border: 2px solid $tertiary-color;
+    color: $tertiary-color;
+    &:hover {
+        background-color: $tertiary-color;
+        color: white;
+    }
+}
+
+.button {
+    @include button;
+}
+
+.button--primary {
+    @include button--primary;
+    &.button--outlined {
+        @include button--outlined-primary;
+    }
+}
+
+.button--dark {
+    @include button--dark;
+    &.button--outlined {
+        @include button--outlined-dark;
+    }
+}
+
+.button--secondary {
+    @include button--secondary;
+    &.button--outlined {
+        @include button--outlined-secondary;
+    }
+}
+
+.button--tertiary {
+    @include button--tertiary;
+    &.button--outlined {
+        @include button--outlined-tertiary;
+    }
+}
